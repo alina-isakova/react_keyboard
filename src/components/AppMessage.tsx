@@ -13,7 +13,7 @@ export class AppMessage extends React.Component<Props, State> {
     message: 'Nothing was pressed yet',
   };
 
-  handleDocumenPressButton = (event: KeyboardEvent) => {
+  handleDocumentPressButton = (event: KeyboardEvent) => {
     this.setState({
       pressedKey: event.key,
       message: `The last pressed key is [${event.key}]`,
@@ -21,11 +21,11 @@ export class AppMessage extends React.Component<Props, State> {
   };
 
   componentDidMount(): void {
-    document.addEventListener('keyup', this.handleDocumenPressButton);
+    document.addEventListener('keyup', this.handleDocumentPressButton);
   }
 
   componentWillUnmount(): void {
-    document.removeEventListener('keyup', this.handleDocumenPressButton);
+    document.removeEventListener('keyup', this.handleDocumentPressButton);
   }
 
   render() {
